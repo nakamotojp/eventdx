@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ｜イベントDXプラットフォーム</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Event<span>DX</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/#services">サービス</a>
+          <a href="/#cases">導入事例</a>
+          <a href="/pricing.html">料金プラン</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container fade-in-up">
+          <h1 class="page-title">お問い合わせ・無料相談</h1>
+          <p class="page-subtitle">イベント運営でお困りのこと、サービスの詳細や費用についてなど、<br>どのようなことでもお気軽にお問い合わせください。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container fade-in-up">
+          <div class="contact-container">
+            <form action="/thanks.html" method="GET">
+              
+              <div class="form-group">
+                <label class="form-label">お問い合わせ種別 <span class="required">必須</span></label>
+                <div class="radio-group">
+                  <label class="checkbox-label"><input type="radio" name="type" value="consultation" required checked> サービスについて相談したい</label>
+                  <label class="checkbox-label"><input type="radio" name="type" value="demo"> デモを見たい</label>
+                  <label class="checkbox-label"><input type="radio" name="type" value="estimate"> 見積もりが欲しい</label>
+                  <label class="checkbox-label"><input type="radio" name="type" value="other"> その他</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="company">会社名・団体名 <span class="required">必須</span></label>
+                <input type="text" id="company" name="company" class="form-control" placeholder="例：株式会社イベントデジタルソリューションズ" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="dept">部署名</label>
+                <input type="text" id="dept" name="dept" class="form-control" placeholder="例：企画部">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="name">お名前 <span class="required">必須</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="例：山田 太郎" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">メールアドレス <span class="required">必須</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="例：taro.yamada@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">電話番号 <span class="required">必須</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="例：03-1234-5678" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">興味のあるサービス（複数選択可）</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="marugoto"> まるごと祭</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="digiact"> デジアクト</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="dome"> DOME</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="nodo"> Nodo</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="voipeng"> VOIPENG</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                <textarea id="message" name="message" class="form-control" placeholder="現状の課題や、ご検討いただいている背景などをご記入ください。" required></textarea>
+              </div>
+
+              <div class="form-group" style="text-align:center; margin-top: 2rem;">
+                <label class="checkbox-label" style="justify-content:center;">
+                  <input type="checkbox" name="privacy" required>
+                  <a href="#">プライバシーポリシー</a>に同意する <span class="required">必須</span>
+                </label>
+              </div>
+
+              <div class="form-action">
+                <button type="submit" class="btn btn-primary btn-large" style="min-width: 250px;">送信する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 2rem 0; text-align:center;">
+        <div class="container">
+          <p style="color:var(--color-text-muted)">&copy; 2026 Event Digital Solutions Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

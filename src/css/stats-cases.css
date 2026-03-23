@@ -1,0 +1,234 @@
+/* Stats Section */
+.stats {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  text-align: center;
+}
+
+.stats .section-title {
+  color: white;
+}
+
+.stats .section-title::after {
+  background-color: var(--color-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: baseline;
+}
+
+.stat-unit {
+  font-size: 1.5rem;
+  margin-left: 0.25rem;
+  color: white;
+}
+
+.stat-label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* Case Studies Section */
+.cases {
+  background-color: var(--color-bg-white);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.case-card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.case-image {
+  height: 200px;
+  background-color: var(--color-bg-light);
+  position: relative;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.case-content {
+  padding: var(--spacing-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-client {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.case-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.case-quote {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
+}
+
+.case-action {
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .case-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
+
+/* Testimonials / Voices */
+.voices {
+  background-color: var(--color-bg-light);
+  overflow: hidden;
+}
+
+.voice-slider {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: 1rem 0;
+  width: fit-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.voice-slider:hover {
+  animation-play-state: paused;
+}
+
+.voice-card {
+  width: 400px;
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.voice-stars {
+  color: #FBBF24;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.voice-text {
+  font-size: 1rem;
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.voice-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: var(--spacing-md);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: var(--spacing-sm);
+}
+
+.voice-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.voice-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-name {
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.voice-role {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+/* Because of infinite scroll we duplicate items inside */
